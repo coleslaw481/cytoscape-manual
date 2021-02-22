@@ -106,8 +106,6 @@ viewers. These are further explained below.
 
 -   An interactive web application
 
-    -   [CyNetShare](http://idekerlab.github.io/cy-net-share/)
-
     -   Full web application
 
     -   Simple network view (for web application developers)
@@ -182,11 +180,8 @@ library, and so enable not only viewing but also Cytoscape-style
 interactive browsing of networks and attributes.
 
 The simplest choice is
-[CyNetShare](Publish_Your_Data.html#sharing-via-cynetshare),
-where you save your network (and optionally a style) on a public file
-system, then interactively view the network in a browser. Like Google
-Maps, you can generate and publish a URL that allows collaborators to
-also view your network.
+[NDEx](Export_Your_Data.html#as_an_ndex_network),
+where you publish your network on the [NDEx](http://ndexbio.org) website.
 
 Alternatively, Cytoscape can generate an entire web site showing a
 single page containing the viewer with your network pre-loaded. You can
@@ -221,102 +216,8 @@ information, see the **Export Styles to Cytoscape.js** section below.
 <a id="sharing_via_cynetshare"> </a>
 #### Sharing via CyNetShare
 
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)
-is a browser-based web application that renders JSON-formatted networks
-and attributes saved in public directories. Optionally, you can specify
-visual styles that the web application will use to draw your network as
-it appears in Cytoscape.
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)
-is similar to Google Maps in that once you have loaded your network and
-have tweaked its appearance to suit your needs, you can have
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)
-generate a new URL that you can e-mail or post as a link on your own web
-site. That URL will bring up
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)
-preloaded with your network for anyone to see.
-
-To use
-[CyNetShare](http://idekerlab.github.io/cy-net-share/):
-
-1.  Select **File → Export → Network to File...** to export your
-    network to a public directory. Choose the *Cytoscape.js
-    JSON (\*.cyjs)* export file format.
-
-2.  Optionally, select **File → Export → Style...** to export your
-    style settings. Choose the *Style for cytoscape.js (\*.json)* export
-    file format.
-
-3.  Use your public directory system to determine direct URLs for the
-    files you exported.
-
-4.  Start [CyNetShare](http://idekerlab.github.io/cy-net-share/)
-
-5.  Enter the network's URL as the Graph URL.
-
-6.  Optionally, enter the style's URL.
-
-7.  Click the **Visualize** button.
-
-The
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)
-User Guide is provided on the
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)
-web page:
-
--   [CyNetShare](http://idekerlab.github.io/cy-net-share/)
-
-Note that if you specify a style URL, the style is added to the list of
-styles available in
-[CyNetShare](http://idekerlab.github.io/cy-net-share/)'s
-Visual Style dropdown, and you can apply the style by selecting it in
-the list. CyNetShare's initial display uses the visual style named "default" -- 
-use the Visual Style dropdown to choose the style in effect when Cytoscape
-generated the .cyjs and .json files. 
-
-Note that the mechanics of generating a URL for a file in a public
-directory system is a fast moving topic. Until recently, systems like
-Dropbox (and others) allowed users to create a URL that resolved
-directly to a file -- a "direct" URL would be appropriate for use with
-[CyNetShare](http://idekerlab.github.io/cy-net-share/).
-As of this writing, some public directory systems (e.g., Dropbox)
-generate "shareable" URLs instead, which resolve to a web page that
-allows file download -- a "shareable" URL doesn't work with
-[CyNetShare](http://idekerlab.github.io/cy-net-share/). Systems that offer "shareable" URLs may offer "direct" URLs as
-part of their premium (or Pro) package. To tell if your public directory
-system generates a "direct" URL, have it generate a URL for a file, then
-paste the URL into the address field of a browser and observe whether
-the browser displays the file itself (good!) or a download page for the
-file (bad!).
-
-**Hint:** if Dropbox generates a "shareable" link that looks like 
-`https://www.dropbox.com/s/w5e7towcchuvdeu/cynetworm.cyjs?dl=0`, 
-you may be able to create a "direct" link by changing the `dl=0` to `dl=1`: `https://www.dropbox.com/s/w5e7towcchuvdeu/cynetworm.cyjs?dl=1`.
-
-A simple strategy for always getting a "direct" URL is to store your
-file in a public directory served up by a web server, if you have access
-to one -- a URL served by a web server might appear as:
-[http://myserver.com/~mypublicdir/netstyle.json](http://myserver.com/~mypublicdir/netstyle.json).
-
-Alternately, you can use [Gist](http://gist.github.com/) to create a
-shareable document having a "direct" URL. To try this:
-
-1.  Use Cytoscape to generate your network as a .cyjs file on your local
-    disk
-
-2.  Use an editor to open the file and copy its contents to the
-    clipboard
-
-3.  Use a web browser to surf to [Gist](http://gist.github.com/)
-
-4.  Paste the contents into a Gist document
-
-5.  Select **Create public Gist**
-
-6.  Select **Raw** to place the "direct" URL into your browser's
-    address field
-
-7.  Use that URL with
-    [CyNetShare](http://idekerlab.github.io/cy-net-share/)
+[CyNetShare](http://idekerlab.github.io/cy-net-share/) has been deprecated
+in favor of [NDEx](Export_Your_Data.html#as_an_ndex_network).
 
 <a id="generating_a_full_web_application"> </a>
 #### Generating a Full Web Application
@@ -326,9 +227,8 @@ their network as a complete [single-page
 application](http://en.wikipedia.org/wiki/Single-page_application).
 Cytoscape creates a zip archive containing a complete
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript)-based
-web application that works as a basic viewer (like
-[CyNetShare](http://idekerlab.github.io/cy-net-share/))
-for Cytoscape-generated network visualizations. You can unzip the
+web application that works as a basic viewer for Cytoscape-generated 
+network visualizations. You can unzip the
 archive onto a web server (or your PC) and view the network via a web
 browser on PCs and tablets.
 
